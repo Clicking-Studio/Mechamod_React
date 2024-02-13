@@ -1,0 +1,494 @@
+.product-left-text-container {
+    font-family: 'MetropolisRegular', sans-serif;
+    letter-spacing: 0.08em;
+    padding-top: 70px;
+}
+
+.show-content .product-left-text-container {
+    display: block;
+}
+
+.product-left-text-header {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20pt;
+    padding-left: 297px;
+    max-width: 400px;
+}
+
+.dark .product-left-text-header {
+    color: #e0e0e0;
+}
+
+.product-left-text-title {
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 30px;
+    padding-left: 297px;
+}
+
+.dark .product-left-text-title {
+    color: #e0e0e0;
+}
+
+.product-left-text-bottom {
+    font-size: 21px;
+    line-height: 18pt;
+    letter-spacing: 0.008em;
+    padding-left: 313px;
+}
+
+.dark .product-left-text-bottom {
+    color: #e0e0e0;
+}
+
+.li-continuation {
+    list-style-type: none;
+    text-indent: -20px;
+    /* Adjust the value to align the continuation text with the bullet point */
+}
+
+
+.color-options {
+    font-family: 'MetropolisRegular', sans-serif;
+    letter-spacing: 0.03em;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    /* Adjust the spacing as needed */
+    position: absolute;
+    top: 400px;
+    /* Adjust the vertical position as needed */
+    right: 300px;
+}
+
+.color-option {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.dark .color-option {
+    color: #e0e0e0;
+}
+
+
+.color-option.selected {
+    color: #000;
+}
+
+.dark .color-option.selected {
+    color: #e0e0e0;
+}
+
+.color-option.not-selected {
+    color: #a5a5a5;
+}
+
+
+.price {
+    font-family: 'MetropolisRegular', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 0.03em;
+    position: absolute;
+    top: 450px;
+    /* Adjust the vertical position as needed */
+    right: 405px;
+}
+
+.dark .price {
+    color: #e0e0e0;
+}
+
+.add-to-bag {
+    font-family: 'MetropolisRegular', sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    padding: 20px 85px;
+    /* Increase the padding to add more spacing */
+    margin-top: 10px;
+    background-color: transparent;
+    color: #000;
+    border: solid 1.5px;
+    cursor: pointer;
+    position: absolute;
+    top: 510px;
+    /* Adjust the vertical position as needed */
+    right: 335px;
+}
+
+.dark .add-to-bag {
+    color: #e0e0e0;
+}
+
+.add-to-bag:hover {
+    background-color: #6e6e6e;
+}
+
+.add-to-bag:active {
+    background-color: #353232;
+}
+
+#product-container0 {
+    display: none;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add fade transition properties */
+}
+
+#product-container1 {
+    display: none;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add fade transition properties */
+}
+
+#product-container2 {
+    display: none;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add fade transition properties */
+}
+
+#product-container3 {
+    display: none;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add fade transition properties */
+}
+
+#snake {
+    /* make the snake's specific button cover the hole zone */
+    background-color: transparent !important;
+    flex: 1;
+    border: none;
+    cursor: url('../assets/cart_30x30.png') 55 55, auto;
+}
+
+#shenon {
+    /* make the shenon's specific button cover the hole zone */
+    background-color: transparent !important;
+    flex: 1;
+    border: none;
+    cursor: url('../assets/cart_30x30.png') 55 55, auto;
+}
+
+#model3 {
+    /* make the model3's specific button cover the hole zone */
+    background-color: transparent !important;
+    flex: 1;
+    border: none;
+    cursor: url('../assets/cart_30x30.png') 55 55, auto;
+}
+
+#model4 {
+    /* make the model4's specific button cover the hole zone */
+    background-color: transparent !important;
+    flex: 1;
+    border: none;
+    cursor: url('../assets/cart_30x30.png') 55 55, auto;
+}
+
+
+
+.fade-in-btn {
+    animation: fadeInAnimation 0.5s ease;
+    /* Add a fade-in animation with a duration of 0.5 seconds */
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        /* Start with opacity 0 */
+    }
+
+    to {
+        opacity: 1;
+        /* Fade in to opacity 1 */
+    }
+}
+
+.fade-out-btn {
+    animation: fadeOutAnimation 0.5s ease;
+    /* Add a fade-out animation with a duration of 0.5 seconds */
+}
+
+@keyframes fadeOutAnimation {
+    from {
+        opacity: 1;
+        /* Start with opacity 1 */
+    }
+
+    to {
+        opacity: 0;
+        /* Fade out to opacity 0 */
+    }
+}
+
+/* .circle-text-holder {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    top: 0%;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    z-index: -9999;
+    background: #ccc;
+  } */
+
+@keyframes rotateText {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-text-holder1 {
+    position: relative;
+    left: 50%;
+}
+
+.circle-text1 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    animation:
+        fadeInAnimation 3s ease-in,
+        rotateText 10s linear infinite;
+    font-family: MetropolisRegular;
+    font-weight: 400;
+}
+
+.circle-text1 span {
+    position: absolute;
+    left: 100%;
+    font-size: 1.2em;
+    transform-origin: 0px 200px;
+}
+
+.dark .circle-text1 {
+    color: #e0e0e0;
+}
+
+.snake-background-image {
+    background-image: url(/images/snake_background_white.png);
+    background-size: cover;
+    /* Ensure the background image covers the entire viewport */
+    background-repeat: no-repeat;
+    /* Prevent the background image from repeating */
+    background-attachment: fixed;
+    /* Fix the background image in place */
+    height: 100%;
+    width: 100%;
+}
+
+.dark .snake-background-image {
+    background-image: url(/images/snake_background_black.png);
+}
+
+.snake-background-container {
+    margin-top: 10%;
+    margin-left: 36%;
+    width: 100%;
+    height: 100%;
+    /* z-index: -9999999; */
+}
+
+.snake-background-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.snake-background-item img {
+    position: absolute;
+    width: 60vh;
+    height: 100vh;
+    /* object-fit: cover; */
+    transform: scale(1.5);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark .snake-background-item img {
+    filter: invert();
+}
+
+.snake-background-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #e0e0e0;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark .snake-background-overlay {
+    background-color: #0B0B0C;
+}
+
+.transition-active .snake-background-overlay {
+    top: -100%;
+}
+
+.circle-text2 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    animation:
+        fadeInAnimation 3s ease-in,
+        rotateText 10s linear infinite;
+    font-family: MetropolisRegular;
+    font-weight: 400;
+}
+
+.dark .circle-text2 {
+    color: #e0e0e0;
+}
+
+.circle-text2 span {
+    position: absolute;
+    left: 100%;
+    font-size: 1.2em;
+    transform-origin: 0px 200px;
+}
+
+.shenron-circle {
+    display: none;
+}
+
+.circle-text3 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    animation:
+        fadeInAnimation 3s ease-in,
+        rotateText 10s linear infinite;
+    font-family: MetropolisRegular;
+    font-weight: 400;
+}
+
+.dark .circle-text3 {
+    color: #e0e0e0;
+}
+
+.circle-text3 span {
+    position: absolute;
+    left: 100%;
+    font-size: 1.2em;
+    transform-origin: 0px 200px;
+}
+
+.model3-circle {
+    display: none;
+}
+
+.circle-text4 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    animation:
+        fadeInAnimation 3s ease-in,
+        rotateText 10s linear infinite;
+    font-family: MetropolisRegular;
+    font-weight: 400;
+}
+
+.dark .circle-text4 {
+    color: #e0e0e0;
+}
+
+.circle-text4 span {
+    position: absolute;
+    left: 100%;
+    font-size: 1.2em;
+    transform-origin: 0px 200px;
+}
+
+.model4-circle {
+    display: none;
+}
+
+/* responsive css */
+@media (max-width: 1800px) {
+    .product-left-text-container {
+        padding-top: 0px;
+        letter-spacing: 0.02em;
+    }
+
+    .product-left-text-title {
+        padding-bottom: 5px;
+        font-size: 25px;
+        padding-left: 220px;
+    }
+
+    .product-left-text-header {
+        font-size: 15px;
+        line-height: 17 pt;
+        padding-left: 220px;
+        max-width: 400px;
+    }
+
+    .product-left-text-bottom {
+        font-size: 16px;
+        line-height: 14pt;
+        letter-spacing: 0.008em;
+        padding-left: 240px;
+    }
+
+    .color-options {
+        letter-spacing: 0.03em;
+        margin-right: 20px;
+        /* Adjust the spacing as needed */
+        top: 280px;
+        /* Adjust the vertical position as needed */
+        right: 240px;
+    }
+
+    .color-option {
+        font-size: 15px;
+        padding: 5px 10px;
+        margin-right: 10px;
+    }
+
+    .price {
+        font-weight: 600;
+        font-size: 32px;
+        letter-spacing: 0.03em;
+        top: 330px;
+        /* Adjust the vertical position as needed */
+        right: 345px;
+    }
+
+    .add-to-bag {
+        font-weight: 900;
+        font-size: 13px;
+        letter-spacing: 0.03em;
+        padding: 15px 55px;
+        /* Increase the padding to add more spacing */
+        margin-top: 10px;
+        top: 380px;
+        /* Adjust the vertical position as needed */
+        right: 290px;
+    }
+}
+
+@media (max-width: 1410px) {
+    .wrapper {
+        display: none;
+    }
+
+    .botcontainer {
+        display: none;
+    }
+}
