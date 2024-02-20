@@ -11,33 +11,14 @@ import { addToCart } from "../productScripts/cartSystem";
 import { fetchKeycaps } from "../productScripts/displayKeycapInfo";
 import { color } from "../script/color";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { default as snakeBg1 } from "/images/snake_background1.png";
 import { default as mouseScroll } from "../assets/mouse-scroll-icon.png";
 import Navbar from "../components/Navbar";
-import BottomMenu from "../components/BottomMenu";
+import Menu from "../components/Menu";
+import Cart from "./Cart";
 
 const Home = () => {
 	useEffect(() => {
-		const btns = document.querySelectorAll(".btn");
-
-		btns.forEach((btn) => {
-			btn.addEventListener("mousemove", function (e) {
-				const position = btn.getBoundingClientRect();
-				const x = e.pageX - position.left - position.width / 2;
-				const y = e.pageY - position.top - position.height / 2;
-
-				btn.children[0].style.transform =
-					"translate(" + x * 0.3 + "px, " + y * 0.5 + "px)";
-			});
-		});
-
-		btns.forEach((btn) => {
-			btn.addEventListener("mouseout", function () {
-				btn.children[0].style.transform = "translate(0px, 0px)";
-			});
-		});
-
 		darkLightModes(); //dark-light modes functionallity
 		color(); //color functionality
 		product(); //product functionallity
@@ -101,7 +82,6 @@ const Home = () => {
 
 			<Navbar />
 
-			<input type="checkbox" id="circleMenu" />
 
 			<div id="product-container0">
 				{/* <!-- SNAKE PRODUCT INFO --> */}
@@ -263,47 +243,8 @@ const Home = () => {
 				{/* <!-- <img src="mouse-scroll-icon.png" alt="Scroll Icon" className="scroll-wheel" id="scroll-icon"> --> */}
 			</div>
 
-			<div className="container">
-				<a className="button container-button">
-					<label htmlFor="circleMenu">
-						<div className="btn button-color-inner">
-							<span>
-								<div className="button-lines-inner line-4"></div>
-								<div className="button-lines-inner line-5"></div>
-							</span>
-						</div>
-					</label>
-				</a>
-
-				<Link className="container_logo" to="/">
-					<img src="/images/navbar_logo.png" alt="logo" />
-				</Link>
-
-				<ul className="menu_list">
-					<li className="menu_item">
-						<Link to="/" title="" className="menu_link">
-							Shop
-						</Link>
-					</li>
-					<li className="menu_item">
-						<a href="#" title="" className="menu_link">
-							Community
-						</a>
-					</li>
-					<li className="menu_item">
-						<Link to="/catalogue" title="" className="menu_link">
-							Catalogue
-						</Link>
-					</li>
-					<li className="menu_item">
-						<a href="#" title="" className="menu_link">
-							Our&nbsp;Story
-						</a>
-					</li>
-				</ul>
-
-				<BottomMenu />
-			</div>
+			<Menu />
+			<Cart />
 		</div>
 	);
 };

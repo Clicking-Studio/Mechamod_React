@@ -1,10 +1,49 @@
+.cart-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #d3d3d3;
+    display: none;
+    z-index: 2;
+}
+
+.cart-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 90px;
+}
+
+.cart-header {
+    color: #0b0b0c;
+    font-size: 50px; /* Adjust font size as needed */
+    font-family: 'Hug Me Tight', sans-serif;
+    padding-top: 20px;
+    padding-left: 45px;
+}
+
+.continue-shopping {
+    text-align: right;
+    padding-right: 45px;
+    font-size: 22px;
+    font-family: 'MetropolisRegular', sans-serif;
+}
+
+.continue-shopping a {
+    color: #000;
+    text-decoration: none;
+}
+
+
 .cart-container {
     display: flex;
-    /* align-items: center;*/
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: MetropolisRegular;
+    font-family: 'MetropolisRegular', sans-serif;
 }
 
 #cart {
@@ -17,8 +56,8 @@ table {
     margin-top: 20px;
 }
 
-th, td {
-    /* border: 1px solid #ddd; */
+th,
+td {
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 120px;
@@ -36,20 +75,10 @@ th {
     margin-bottom: 0;
     padding-bottom: 0;
     font-size: 25px;
-    /* background-color: #f2f2f2; */
 }
 
 .dark th {
     color: #fff;
-}
-
-.cart-header {
-    color: #0b0b0c;
-    font-family: Hug Me Tight, sans-serif;
-    font-size: 65px;
-    font-weight: normal;
-    text-decoration: none;
-    padding-left: 30%;
 }
 
 .dark .cart-header {
