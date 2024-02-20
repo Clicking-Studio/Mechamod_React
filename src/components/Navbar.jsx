@@ -7,12 +7,10 @@ const Navbar = () => {
     const [loc, setLoc] = useState(null);
 
     useEffect(() => {
+		toggleCart()
 
         setLoc(location.pathname);
     }, [location.pathname]);
-
-	
-	toggleCart()
 
     return (
         <ul className="navbar_container">
