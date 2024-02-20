@@ -1,14 +1,15 @@
 .cart-content {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%; /* Initial position off-screen */
     width: 60%;
     height: 100%;
     overflow-y: auto;
     background-color: #d3d3d3;
-    display: none;
     z-index: 2;
+    transition: right 0.3s ease; /* Transition property for sliding effect */
 }
+
 
 .cart-navbar {
     display: flex;
