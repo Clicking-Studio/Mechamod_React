@@ -1,24 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { toggleCart } from "../script/toggleCart";
 
 const Navbar = () => {
     const location = useLocation();
     const [loc, setLoc] = useState(null);
-    const [isCartVisible, setIsCartVisible] = useState(false); // Track cart visibility
 
     useEffect(() => {
+
         setLoc(location.pathname);
     }, [location.pathname]);
 
-    // Function to toggle cart visibility
-	const toggleCart = () => {
-		const cartContent = document.querySelector('.cart-content');
-		if (cartContent) {
-			const currentDisplay = window.getComputedStyle(cartContent).getPropertyValue('display');
-			cartContent.style.display = currentDisplay === 'none' ? 'block' : 'none';
-		}
-	};
 	
+	toggleCart()
 
     return (
         <ul className="navbar_container">
