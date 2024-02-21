@@ -38,7 +38,7 @@ export async function displayCart() {
 
         // Create table header
         const headerRow = document.createElement('tr');
-        const headerNames = ['Name', 'Price', 'Quantity'];
+        const headerNames = ['', '']; // Removed 'Quantity' from header names
 
         headerNames.forEach(name => {
             const th = document.createElement('th');
@@ -56,14 +56,10 @@ export async function displayCart() {
             nameCell.textContent = item.name;
 
             const priceCell = document.createElement('td');
-            priceCell.textContent = `$${item.price}`;
-
-            const quantityCell = document.createElement('td');
-            quantityCell.textContent = item.quantity;
+            priceCell.textContent = `₹ ${item.price}`;
 
             row.appendChild(nameCell);
             row.appendChild(priceCell);
-            row.appendChild(quantityCell);
 
             table.appendChild(row);
         });
@@ -73,6 +69,7 @@ export async function displayCart() {
         console.error('Error:', error);
     }
 }
+
 
 // Fetch cart items when the cart page loads
 // document.addEventListener('DOMContentLoaded', displayCart);
