@@ -11,6 +11,11 @@
     box-shadow: -50px 0 200px rgba(0, 0, 0, 0.5);
 }
 
+.dark .cart-content {
+    background-color: #000;
+    box-shadow: -50px 0 200px rgba(255, 255, 255, 0.5);
+}
+
 
 .cart-navbar {
     display: flex;
@@ -34,9 +39,14 @@
     font-family: 'MetropolisRegular', sans-serif;
 }
 
+
 .continue-shopping a {
     color: #000;
     text-decoration: none;
+}
+
+.dark .continue-shopping a {
+    color: #fff;
 }
 
 
