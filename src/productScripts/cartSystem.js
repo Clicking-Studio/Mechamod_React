@@ -53,16 +53,28 @@ export async function displayCart() {
             const row = document.createElement('tr');
 
             const nameCell = document.createElement('td');
+            nameCell.classList.add('cart-name');
             nameCell.textContent = item.name;
 
             const priceCell = document.createElement('td');
+            priceCell.classList.add('cart-price');
             priceCell.textContent = `₹ ${item.price}`;
 
+            const imageCell = document.createElement('td');
+            const imageElement = document.createElement('img');
+            imageElement.src = item.image_path; // Assuming the image path is stored in the `image_path` property of each item
+            imageElement.alt = item.name; // Set alt text for accessibility
+            imageElement.width = 100; // Set the width of the image (adjust as needed)
+            imageCell.appendChild(imageElement);
+
+            row.appendChild(imageCell);
             row.appendChild(nameCell);
             row.appendChild(priceCell);
+            
 
             table.appendChild(row);
         });
+
 
         cartElement.appendChild(table);
     } catch (error) {

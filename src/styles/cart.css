@@ -60,10 +60,10 @@ table {
 
 th,
 td {
-    padding-top: 40px;
-    padding-bottom: 30px;
-    padding-left: 400px;
-    padding-right: 300px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 0px;
     text-align: left;
     white-space: nowrap; /* Prevent text wrapping */
     font-size: 16px;
@@ -72,6 +72,14 @@ td {
 
 .dark td {
     color: #fff;
+}
+
+.cart-price {
+    padding-right: 5rem;
+}
+
+.cart-name {
+    padding-right: 35rem;
 }
 
 th {
