@@ -20,20 +20,20 @@ const Cart = () => {
 		displayCart(); //display-cart functionallity
 		fetchKeycaps(); //fetch key caps functionallity
 	}, []);
-	return (
-		<div className="cart-content">
-			<div className="cart-navbar">
-				<div className="cart-header">your cart</div>
-				<div class="continue-shopping">
-				<a href="#" onClick={toggleCart}>Continue Shopping</a>
-				</div>
-			</div>
-			<div className="cart-container">
-				<div id="cart">
-					<ul id="cart-items"></ul>
-				</div>
-			</div>
-		</div>
+    return (
+        <div className="cart-content">
+            <div className="cart-navbar">
+                <div className="cart-header">Your Cart</div>
+                <div className="continue-shopping">
+                    <a href="#" onClick={toggleCart}>Continue Shopping</a>
+                </div>
+            </div>
+            <div className="cart-container">
+                <div id="cart">
+                    <ul id="cart-items"></ul>
+                </div>
+            </div>
+        </div>
 
 	);
 };
