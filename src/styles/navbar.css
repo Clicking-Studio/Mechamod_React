@@ -160,3 +160,9 @@
     padding: 100px 0;
   }
 }
+
+@media (max-width: 1410px) {
+  .navbar_container a {
+    font-size: 18px;
+  }
+}

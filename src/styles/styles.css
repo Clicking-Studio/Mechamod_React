@@ -736,10 +736,6 @@ body {
 
 
 @media (max-width: 1410px) {
-  .navbar_container {
-    display: none;
-  }
-
   .love_text {
     display: none;
   }

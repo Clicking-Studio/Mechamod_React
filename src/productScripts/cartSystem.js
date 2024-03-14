@@ -1,19 +1,19 @@
 const baseURL = 'https://mechamod-backend.vercel.app'; // Update with your deployed URL
 console.log('cartSystem script loaded');
 
-export async function addToCart(keycapOrderPosition) {
+export async function addToCart(keycapId) {
     try {
         const response = await fetch(`${baseURL}/cart`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ order_position: keycapOrderPosition }),
+            body: JSON.stringify({ keycap_id: keycapId }), // Send keycap_id instead of order_position
         });
 
-        const keycap = await response.json();
+        const addedItem = await response.json();
 
-        alert(`Added ${keycap.name} to the cart!`);
+        alert(`Added ${addedItem.name} to the cart!`);
         displayCart();
     } catch (error) {
         console.error('Error:', error);
