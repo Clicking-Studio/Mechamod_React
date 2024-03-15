@@ -113,9 +113,9 @@ th {
 .cart-buttons {
     display: flex;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     bottom: 10%;
-    left: 50%;
+    left: 25%;
 }
 
 .checkout-button,
@@ -123,7 +123,7 @@ th {
     font-family: 'MetropolisRegular', sans-serif;
     font-weight: bolder;
     font-size: 18px;
-    padding: 20px 60px;
+    
     border: 2px solid #000; /* Adjust border styles as needed */
     cursor: pointer;
     margin-left: 10px; /* Add margin between buttons */
@@ -133,10 +133,12 @@ th {
 .checkout-button {
     background-color: #000;
     color: #fff;
+    padding: 20px 90px;
 }
 
 .continue-shopping-button {
     background-color: transparent;
+    padding: 20px 40px;
 }
 
 .checkout-button:hover,
