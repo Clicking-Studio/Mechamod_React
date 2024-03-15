@@ -142,23 +142,27 @@ const Home = () => {
 					</div>
 				</div>
 
-				<div className="color-options">
-					<div className="color-option" id="color-black">
-						BLACK
-					</div>
-					<div className="color-option" id="color-desert">
-						DESERT
-					</div>
-					<div className="color-option" id="color-gold">
-						GOLD
+				<div className="product-right-container">
+					<div className="product-centering-div">
+						<div className="color-options">
+							<div className="color-option" id="color-black">
+								BLACK
+							</div>
+							<div className="color-option" id="color-desert">
+								DESERT
+							</div>
+							<div className="color-option" id="color-gold">
+								GOLD
+							</div>
+						</div>
+
+						<div className="price"></div>
+
+						<button onClick={() => addToCart(2)} className="add-to-bag">
+							ADD TO BAG
+						</button>
 					</div>
 				</div>
-
-				<div className="price"></div>
-
-				<button onClick={() => addToCart(2)} className="add-to-bag">
-					ADD TO BAG
-				</button>
 			</div>
 
 			{/* <!--PRODUCT #3 INFO --> */}
@@ -178,23 +182,27 @@ const Home = () => {
 					</div>
 				</div>
 
-				<div className="color-options">
-					<div className="color-option" id="color-black">
-						BLACK
-					</div>
-					<div className="color-option" id="color-desert">
-						DESERT
-					</div>
-					<div className="color-option" id="color-gold">
-						GOLD
+				<div className="product-right-container">
+					<div className="product-centering-div">
+						<div className="color-options">
+							<div className="color-option" id="color-black">
+								BLACK
+							</div>
+							<div className="color-option" id="color-desert">
+								DESERT
+							</div>
+							<div className="color-option" id="color-gold">
+								GOLD
+							</div>
+						</div>
+
+						<div className="price"></div>
+
+						<button onClick={() => addToCart(3)} className="add-to-bag">
+							ADD TO BAG
+						</button>
 					</div>
 				</div>
-
-				<div className="price"></div>
-
-				<button onClick={() => addToCart(3)} className="add-to-bag">
-					ADD TO BAG
-				</button>
 			</div>
 
 			{/* <!-- PRODUCT #4 INFO --> */}
@@ -214,23 +222,27 @@ const Home = () => {
 					</div>
 				</div>
 
-				<div className="color-options">
-					<div className="color-option" id="color-black">
-						BLACK
-					</div>
-					<div className="color-option" id="color-desert">
-						DESERT
-					</div>
-					<div className="color-option" id="color-gold">
-						GOLD
+				<div className="product-right-container">
+					<div className="product-centering-div">
+						<div className="color-options">
+							<div className="color-option" id="color-black">
+								BLACK
+							</div>
+							<div className="color-option" id="color-desert">
+								DESERT
+							</div>
+							<div className="color-option" id="color-gold">
+								GOLD
+							</div>
+						</div>
+
+						<div className="price"></div>
+
+						<button onClick={() => addToCart(4)} className="add-to-bag">
+							ADD TO BAG
+						</button>
 					</div>
 				</div>
-
-				<div className="price"></div>
-
-				<button onClick={() => addToCart(4)} className="add-to-bag">
-					ADD TO BAG
-				</button>
 			</div>
 
 			<div className="index-container">
