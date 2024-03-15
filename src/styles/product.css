@@ -1,18 +1,41 @@
 .product-left-text-container {
     font-family: 'MetropolisRegular', sans-serif;
     letter-spacing: 0.08em;
-    padding-top: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%; /* Set width to half of the screen */
+    height: 100%; /* Take full height of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-centering-div {
+    
 }
 
 .show-content .product-left-text-container {
     display: block;
 }
 
+.product-left-text-title {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 30px;
+    /* padding-left: 297px; */
+    margin: 0;
+}
+
+.dark .product-left-text-title {
+    color: #e0e0e0;
+}
+
 .product-left-text-header {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 20pt;
-    padding-left: 297px;
+    /* padding-left: 297px; */
     max-width: 400px;
 }
 
@@ -20,22 +43,12 @@
     color: #e0e0e0;
 }
 
-.product-left-text-title {
-    padding-bottom: 15px;
-    font-weight: 700;
-    font-size: 30px;
-    padding-left: 297px;
-}
-
-.dark .product-left-text-title {
-    color: #e0e0e0;
-}
-
 .product-left-text-bottom {
     font-size: 21px;
     line-height: 18pt;
     letter-spacing: 0.008em;
-    padding-left: 313px;
+    padding-left: 20px;
+    /* padding-left: 313px; */
 }
 
 .dark .product-left-text-bottom {
@@ -411,28 +424,28 @@
 /* responsive css */
 @media (max-width: 1800px) {
     .product-left-text-container {
-        padding-top: 0px;
+        /* padding-top: 0px; */
         letter-spacing: 0.02em;
     }
 
     .product-left-text-title {
-        padding-bottom: 5px;
+        /* padding-bottom: 5px; */
         font-size: 25px;
-        padding-left: 220px;
+        /* padding-left: 220px; */
     }
 
     .product-left-text-header {
         font-size: 15px;
         line-height: 17 pt;
-        padding-left: 220px;
-        max-width: 400px;
+        /* padding-left: 220px; */
+        max-width: 300px;
     }
 
     .product-left-text-bottom {
         font-size: 16px;
         line-height: 14pt;
         letter-spacing: 0.008em;
-        padding-left: 240px;
+        /* padding-left: 240px; */
     }
 
     .color-options {

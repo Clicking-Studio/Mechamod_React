@@ -86,18 +86,20 @@ const Home = () => {
 			<div id="product-container0">
 				{/* <!-- SNAKE PRODUCT INFO --> */}
 				<div className="product-left-text-container">
-					<div className="product-left-text-title"></div>
-					<div className="product-left-text-header"></div>
-					<ul className="product-left-text-bottom">
-						<li>Casted with Smooth-On</li>
-						<li>Compatible with Cherry MX</li>
-						<li className="li-continuation">and clones</li>
-						<li>Hand Crafted</li>
-						<li>Limited to 50 units sold</li>
-						<li className="li-continuation">
-							worldwide, one of a kind ;)
-						</li>
-					</ul>
+					<div className="product-centering-div">
+						<div className="product-left-text-title"></div>
+						<div className="product-left-text-header"></div>
+						<ul className="product-left-text-bottom">
+							<li>Casted with Smooth-On</li>
+							<li>Compatible with Cherry MX</li>
+							<li className="li-continuation">and clones</li>
+							<li>Hand Crafted</li>
+							<li>Limited to 50 units sold</li>
+							<li className="li-continuation">
+								worldwide, one of a kind ;)
+							</li>
+						</ul>
+					</div>
 				</div>
 
 				<div className="color-options">
@@ -122,16 +124,18 @@ const Home = () => {
 			<div id="product-container1">
 				{/* <!-- SHENRON PRODUCT INFO --> */}
 				<div className="product-left-text-container">
-					<div className="product-left-text-title"></div>
-					<div className="product-left-text-header"></div>
-					<ul className="product-left-text-bottom">
-						<li>Description 1</li>
-						<li>Description 2</li>
-						<li className="li-continuation">test</li>
-						<li>Description 3</li>
-						<li>Description 4</li>
-						<li className="li-continuation">test</li>
-					</ul>
+					<div className="product-centering-div">
+						<div className="product-left-text-title"></div>
+						<div className="product-left-text-header"></div>
+						<ul className="product-left-text-bottom">
+							<li>Description 1</li>
+							<li>Description 2</li>
+							<li className="li-continuation">test</li>
+							<li>Description 3</li>
+							<li>Description 4</li>
+							<li className="li-continuation">test</li>
+						</ul>
+					</div>
 				</div>
 
 				<div className="color-options">
@@ -156,16 +160,18 @@ const Home = () => {
 			{/* <!--PRODUCT #3 INFO --> */}
 			<div id="product-container2">
 				<div className="product-left-text-container">
-					<div className="product-left-text-title"></div>
-					<div className="product-left-text-header"></div>
-					<ul className="product-left-text-bottom">
-						<li>Description for it</li>
-						<li>Description for it too</li>
-						<li className="li-continuation">test</li>
-						<li>More of the description</li>
-						<li>Last description</li>
-						<li className="li-continuation">test</li>
-					</ul>
+					<div className="product-centering-div">
+						<div className="product-left-text-title"></div>
+						<div className="product-left-text-header"></div>
+						<ul className="product-left-text-bottom">
+							<li>Description for it</li>
+							<li>Description for it too</li>
+							<li className="li-continuation">test</li>
+							<li>More of the description</li>
+							<li>Last description</li>
+							<li className="li-continuation">test</li>
+						</ul>
+					</div>
 				</div>
 
 				<div className="color-options">
@@ -190,16 +196,18 @@ const Home = () => {
 			{/* <!-- PRODUCT #4 INFO --> */}
 			<div id="product-container3">
 				<div className="product-left-text-container">
-					<div className="product-left-text-title"></div>
-					<div className="product-left-text-header"></div>
-					<ul className="product-left-text-bottom">
-						<li>Description for it</li>
-						<li>Description for it too</li>
-						<li className="li-continuation">test</li>
-						<li>More of the description</li>
-						<li>Last description</li>
-						<li className="li-continuation">another test</li>
-					</ul>
+					<div className="product-centering-div">
+						<div className="product-left-text-title"></div>
+						<div className="product-left-text-header"></div>
+						<ul className="product-left-text-bottom">
+							<li>Description for it</li>
+							<li>Description for it too</li>
+							<li className="li-continuation">test</li>
+							<li>More of the description</li>
+							<li>Last description</li>
+							<li className="li-continuation">another test</li>
+						</ul>
+					</div>
 				</div>
 
 				<div className="color-options">
