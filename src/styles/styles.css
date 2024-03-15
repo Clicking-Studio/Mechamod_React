@@ -734,29 +734,28 @@ body {
   visibility: hidden;
 }
 
-
-@media (max-width: 1410px) {
+@media (max-width: 1198px) {
   .love_text {
     display: none;
   }
 
-  .shadow-wrapper {
+  /* .shadow-wrapper {
     display: none;
-  }
+  } */
 
-  .webgl {
+  /* .webgl {
     display: none;
   }
 
   .wrapper {
     display: none;
-  }
+  } */
 
-  .container {
+  /* .container {
     display: none;
-  }
+  } */
 
-  .small-screen-container {
+  /* .small-screen-container {
     display: flex;
     background: linear-gradient(60deg, rgb(56, 55, 55), rgb(71, 68, 68));
     background-size: 200% 200%;
@@ -765,8 +764,8 @@ body {
 
   .small-screen-message {
     display: block;
-  }
-
+  } */
+/* 
   @keyframes gradientAnimation {
     0% {
       background-position: 0% 50%;
@@ -779,5 +778,5 @@ body {
     100% {
       background-position: 0% 50%;
     }
-  }
+  } */
 }

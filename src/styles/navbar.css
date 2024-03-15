@@ -166,3 +166,12 @@
     font-size: 18px;
   }
 }
+
+@media (max-width: 1198px) {
+  .navbar_text {
+    display: none;
+  }
+  .navbar_line_spacer {
+    display: none;
+  }
+}

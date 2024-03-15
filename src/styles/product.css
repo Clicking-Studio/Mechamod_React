@@ -495,9 +495,9 @@
 }
 
 @media (max-width: 1410px) {
-    .wrapper {
+    /* .wrapper {
         display: none;
-    }
+    } */
 
     .botcontainer {
         display: none;
