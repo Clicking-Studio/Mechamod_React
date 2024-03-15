@@ -102,23 +102,27 @@ const Home = () => {
 					</div>
 				</div>
 
-				<div className="color-options">
-					<div className="color-option" id="color-black">
-						BLACK
-					</div>
-					<div className="color-option" id="color-desert">
-						DESERT
-					</div>
-					<div className="color-option" id="color-gold">
-						GOLD
+				<div className="product-right-container">
+					<div className="product-centering-div">
+						<div className="color-options">
+							<div className="color-option" id="color-black">
+								BLACK
+							</div>
+							<div className="color-option" id="color-desert">
+								DESERT
+							</div>
+							<div className="color-option" id="color-gold">
+								GOLD
+							</div>
+						</div>
+
+						<div className="price"></div>
+
+						<button onClick={() => addToCart(1)} className="add-to-bag">
+							ADD TO BAG
+						</button>
 					</div>
 				</div>
-
-				<div className="price"></div>
-
-				<button onClick={() => addToCart(1)} className="add-to-bag">
-					ADD TO BAG
-				</button>
 			</div>
 
 			<div id="product-container1">
