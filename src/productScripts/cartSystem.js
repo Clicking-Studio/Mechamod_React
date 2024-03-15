@@ -83,5 +83,5 @@ export async function displayCart() {
 }
 
 
-// Fetch cart items when the cart page loads
-// document.addEventListener('DOMContentLoaded', displayCart);
+ //Fetch cart items when the cart page loads
+//document.addEventListener('DOMContentLoaded', displayCart);
