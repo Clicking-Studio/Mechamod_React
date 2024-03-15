@@ -83,8 +83,9 @@ const Home = () => {
 			<Navbar />
 
 
+
+			{/* <!-- SNAKE PRODUCT INFO --> */}
 			<div id="product-container0">
-				{/* <!-- SNAKE PRODUCT INFO --> */}
 				<div className="product-left-text-container">
 					<div className="product-centering-div">
 						<div className="product-left-text-title"></div>
@@ -125,8 +126,9 @@ const Home = () => {
 				</div>
 			</div>
 
+			{/* <!-- SHENRON PRODUCT INFO --> */}
 			<div id="product-container1">
-				{/* <!-- SHENRON PRODUCT INFO --> */}
+
 				<div className="product-left-text-container">
 					<div className="product-centering-div">
 						<div className="product-left-text-title"></div>

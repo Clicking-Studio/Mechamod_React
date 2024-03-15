@@ -46,7 +46,7 @@
     position: relative;
     margin: 0;
     overflow: hidden;
-    z-index: 0;
+    z-index: 1;
   }
 
   .dark .navbar_container a {

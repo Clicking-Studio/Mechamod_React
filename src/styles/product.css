@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -99;
 }
 
 .product-centering-div {
@@ -74,7 +73,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: -99;
 }
 
 .color-options {
@@ -194,7 +192,7 @@
     /* make the snake's specific button cover the hole zone */
     background-color: transparent !important;
     flex: 1;
-    border: none;
+    border: none ;
     cursor: url('../assets/cart_30x30.png') 55 55, auto;
 }
 

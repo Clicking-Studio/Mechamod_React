@@ -237,7 +237,7 @@ body {
   align-items: center;
   display: flex;
   position: absolute;
-  
+  z-index: 1;
 }
 
 #hover-zone {
