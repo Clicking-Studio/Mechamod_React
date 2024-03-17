@@ -1,28 +1,60 @@
-const baseURL = 'https://mechamod-backend.vercel.app'; // Update with your deployed URL
+const baseURL = 'https://mechamod-backend.vercel.app/'; // Update with your deployed URL
 console.log('cartSystem script loaded');
 
 export async function addToCart(keycapId) {
     try {
+        let sessionID = localStorage.getItem('sessionID'); // Retrieve session ID from localStorage
+        if (!sessionID) {
+            // If session ID does not exist in localStorage, generate a new one
+            sessionID = generateSessionID();
+            localStorage.setItem('sessionID', sessionID); // Store session ID in localStorage
+        }
+        console.log(`SESSION: ${sessionID}`)
         const response = await fetch(`${baseURL}/addToCart`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ keycap_id: keycapId }), // Send keycap_id instead of order_position
+            body: JSON.stringify({ keycap_id: keycapId, session_id: sessionID }), // Include session ID in the request body
         });
 
-        const addedItem = await response.json();
-
-        alert(`Added ${addedItem.name} to the cart!`);
-        displayCart();
+        if (response.ok) {
+            // If response is successful, parse the JSON response
+            const addedItem = await response.json();
+            alert(`Added ${addedItem.keycap.name} to the cart!`);
+            displayCart();
+        } else if (response.status === 400) {
+            // If item already exists in cart, parse the JSON response and display the message
+            const errorData = await response.json();
+            alert(errorData.message);
+        } else {
+            // Handle other errors here
+            throw new Error('Failed to add item to cart');
+        }
     } catch (error) {
         console.error('Error:', error);
     }
 }
 
+// Function to generate a session ID
+function generateSessionID() {
+    // Generate a random session ID using a UUID generator library or a custom implementation
+    // For example, using uuid package:
+    // return uuid.v4();
+    // Here's a simple implementation using Math.random():
+    return Math.random().toString(36).substr(2, 9);
+}
+
 export async function displayCart() {
     try {
-        const response = await fetch(`${baseURL}/getCart`);
+        const sessionID = localStorage.getItem('sessionID'); // Retrieve session ID from localStorage
+
+        if (!sessionID) {
+            console.error('Session ID not found');
+            return;
+        }
+
+        const response = await fetch(`${baseURL}/getCart?session_id=${sessionID}`); // Include session ID as a query parameter
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
