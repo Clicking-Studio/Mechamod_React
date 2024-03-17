@@ -1,4 +1,4 @@
-const baseURL = 'https://mechamod-backend.vercel.app/'; // Update with your deployed URL
+const baseURL = 'https://mechamod-backend.vercel.app'; // Update with your deployed URL
 
 export async function fetchKeycaps() {
     try {
