@@ -1,4 +1,4 @@
-const baseURL = 'https://mechamod-backend.vercel.app/'; // Update with your deployed URL
+const baseURL = 'https://mechamod-backend.vercel.app'; // Update with your deployed URL
 console.log('cartSystem script loaded');
 
 export async function addToCart(keycapId) {
