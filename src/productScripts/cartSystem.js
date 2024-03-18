@@ -77,13 +77,13 @@ export async function displayCart() {
             const keycapResponse = await fetch(`${baseURL}/keycaps/${item.keycap_id}`);
             const keycapData = await keycapResponse.json();
 
-            // Create cells for image, name, and price
+            // Create cells for image, name, price, and trash icon
             const imageCell = document.createElement('td');
             const imageElement = document.createElement('img');
             imageElement.src = keycapData.image_path;
             imageElement.alt = keycapData.name;
             imageElement.width = 100;
-            imageElement.classList.add('cart-image'); // Add class 'cart-image' to the image
+            imageCell.classList.add('cart-image');
             imageCell.appendChild(imageElement);
 
             const nameCell = document.createElement('td');
@@ -94,10 +94,37 @@ export async function displayCart() {
             priceCell.textContent = `₹ ${keycapData.price}`;
             priceCell.classList.add('cart-price'); // Add class 'cart-price' to the price cell
 
+            const trashIconCell = document.createElement('td');
+            const trashIconButton = document.createElement('button');
+            const trashIconElement = document.createElement('img');
+            trashIconElement.src = '/images/trashcan.png';
+            trashIconElement.width = 20;
+            trashIconCell.classList.add('cart-trash')
+            trashIconButton.classList.add('cart-trash-button');
+            trashIconButton.appendChild(trashIconElement);
+            trashIconButton.addEventListener('click', async () => {
+                try {
+                    const deleteResponse = await fetch(`${baseURL}/cart/${item.keycap_id}?session_id=${sessionID}`, {
+                        method: 'DELETE'
+                    });
+                    if (deleteResponse.ok) {
+                        console.log(`Keycap ${item.keycap_id} removed from cart`);
+                        // Refresh cart display after deletion
+                        displayCart();
+                    } else {
+                        console.error('Failed to remove keycap from cart:', deleteResponse.statusText);
+                    }
+                } catch (error) {
+                    console.error('Error removing keycap from cart:', error);
+                }
+            });
+            trashIconCell.appendChild(trashIconButton);
+
             // Append cells to the row
             row.appendChild(imageCell);
             row.appendChild(nameCell);
             row.appendChild(priceCell);
+            row.appendChild(trashIconCell); // Append trash icon cell to the row
 
             // Append the row to the table
             table.appendChild(row);

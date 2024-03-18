@@ -49,52 +49,110 @@
     color: #fff;
 }
 
-
+/*
 .cart-container {
     display: flex;
     /* height: 100vh; Remove this line */
+    /*
     font-family: 'MetropolisRegular', sans-serif;
+    padding-top: 70px;
+}*/
+
+.cart-container {
+    display: flex;
+    flex-direction: column; /* Added */
+    align-items: center;
+    font-family: 'MetropolisRegular', sans-serif;
+    padding-top: 100px;
+    width: 100%; /* Added */
 }
+
+.cart-image {
+    width: 130px; /* Adjust width as needed */
+    padding-left: 45px;
+}
+
+.cart-name {
+    flex: 1; /* Takes up remaining space */
+    text-align: left;
+    width: auto; /* Remove width constraint */
+}
+
+.cart-price,
+.cart-trash {
+    width: 20px;
+   /* margin-left: auto; /* Pushes the price and trash icon to the right */
+}
+
+.cart-trash {
+    padding-top: 2px;
+    padding-left: 3px; 
+    padding-right: 90px;
+}
+
+.cart-trash-button {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    padding: 0;
+}
+
+.cart-trash-button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+.cart-trash-button img {
+    display: block; /* Ensure the image takes up the full space of the button */
+}
+
+
 
 #cart {
     /* text-align: center; */
     /* You might need to adjust the width or add max-width to #cart to prevent overflow */
-    max-width: 60%;
+    max-width: 100%;
+    width: 100%;
 }
 
 table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 
-th,
 td {
-    padding-top: 20px;
-    padding-bottom: 0px;
-    padding-left: 40px;
-    padding-right: 0px; 
+    padding: 0; /* Adjusted padding */
     text-align: left;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
     font-size: 20px;
     font-weight: bold;
 }
+
 
 .dark td {
     color: #fff;
 }
 
-.cart-price {
+/* .cart-price {
     position: absolute;
     right: 0;
-    padding-top: 65px;
+    /* padding-top: 65px; */
+    /*
     padding-right: 90px;
     text-align: right;
 }
 
 .cart-name {
     text-align: left;
-}
+} */
+
+
+/* .cart-trash {
+    position: absolute;
+    right: 0;
+    padding-bottom: 100px;
+    padding-right: 60px; /* Adjust padding */ /*
+} */
+
 
 th {
     margin-bottom: 0;
