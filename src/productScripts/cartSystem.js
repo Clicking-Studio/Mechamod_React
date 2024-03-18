@@ -91,8 +91,11 @@ export async function displayCart() {
             nameCell.classList.add('cart-name'); // Add class 'cart-name' to the name cell
 
             const priceCell = document.createElement('td');
-            priceCell.textContent = `₹ ${keycapData.price}`;
+            const priceNumber = parseFloat(keycapData.price); // Convert price to number
+            const formattedPrice = new Intl.NumberFormat('en-IN').format(priceNumber); // Format price with commas
+            priceCell.textContent = `₹ ${formattedPrice}`; // Include currency symbol
             priceCell.classList.add('cart-price'); // Add class 'cart-price' to the price cell
+
 
             const trashIconCell = document.createElement('td');
             const trashIconButton = document.createElement('button');
