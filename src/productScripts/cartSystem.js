@@ -68,21 +68,10 @@ export async function displayCart() {
         // Create a table
         const table = document.createElement('table');
 
-        // Create table header
-        const headerRow = document.createElement('tr');
-        const headerNames = ['Image', 'Name', 'Price']; // Updated header names
-
-        headerNames.forEach(name => {
-            const th = document.createElement('th');
-            th.textContent = name;
-            headerRow.appendChild(th);
-        });
-
-        table.appendChild(headerRow);
-
         // Add items to the table
         for (const item of cartItems) {
             const row = document.createElement('tr');
+            row.classList.add('cart-row'); // Add class 'cart-row' to each row
 
             // Fetch keycap details for each item
             const keycapResponse = await fetch(`${baseURL}/keycaps/${item.keycap_id}`);
@@ -94,13 +83,16 @@ export async function displayCart() {
             imageElement.src = keycapData.image_path;
             imageElement.alt = keycapData.name;
             imageElement.width = 100;
+            imageElement.classList.add('cart-image'); // Add class 'cart-image' to the image
             imageCell.appendChild(imageElement);
 
             const nameCell = document.createElement('td');
             nameCell.textContent = keycapData.name;
+            nameCell.classList.add('cart-name'); // Add class 'cart-name' to the name cell
 
             const priceCell = document.createElement('td');
             priceCell.textContent = `₹ ${keycapData.price}`;
+            priceCell.classList.add('cart-price'); // Add class 'cart-price' to the price cell
 
             // Append cells to the row
             row.appendChild(imageCell);
