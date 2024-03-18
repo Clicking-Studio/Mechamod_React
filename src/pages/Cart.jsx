@@ -36,7 +36,7 @@ const Cart = () => {
 			</div>
 
 			<div className="cart-buttons">
-				<button className="continue-shopping-button">CONTINUE SHOPPING</button>
+				<button className="continue-shopping-button" onClick={toggleCart}>CONTINUE SHOPPING</button>
 				<button className="checkout-button">CHECKOUT</button>
 			</div>
 		</div>
