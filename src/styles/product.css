@@ -127,13 +127,13 @@
     color: #e0e0e0;
 }
 
-.add-to-bag {
+/* .add-to-bag {
     font-family: 'MetropolisRegular', sans-serif;
     font-weight: 900;
     font-size: 16px;
     letter-spacing: 0.03em;
     padding: 20px 85px;
-    /* Increase the padding to add more spacing */
+    /* Increase the padding to add more spacing *//*
     margin-top: 10px;
     background-color: transparent;
     color: #000;
@@ -141,10 +141,10 @@
     cursor: pointer;
     /* position: absolute;
     top: 510px;
-    right: 335px; */
-}
+    right: 335px; *//*
+} */
 
-.dark .add-to-bag {
+/* .dark .add-to-bag {
     color: #e0e0e0;
 }
 
@@ -154,7 +154,7 @@
 
 .add-to-bag:active {
     background-color: #353232;
-}
+} */
 
 #product-container0 {
     display: none;
@@ -430,6 +430,77 @@
 .model4-circle {
     display: none;
 }
+
+.add-to-bag-button-container {
+    position: relative;
+    width: 280px;
+    height: 60px;
+    margin: 20px auto 0; /* Center horizontally and add margin at the top */
+    overflow: hidden;
+    transition: 0.5s;
+    background-color: transparent;
+    color: #000;
+    border: solid 2px;
+}
+
+.add-to-bag-button-container button {
+    width: 100%;
+    height: 100%;
+    font-family: 'MetropolisRegular', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    background: #000000;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    animation: anim2 0.7s steps(22) forwards;
+}
+
+.add-to-bag-button-container button:hover {
+    animation: anim1 0.7s steps(22) forwards;
+}
+
+.add-to-bag-mask {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center vertically and horizontally */
+    color: #000000;
+    text-align: center;
+    width: 100%; /* Adjust as needed */
+    font-family: 'MetropolisRegular', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    overflow: hidden;
+    letter-spacing: 0;
+}
+
+  
+  @keyframes anim1 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+  
+  @keyframes anim2 {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  }
 
 /* responsive css */
 @media (max-width: 1800px) {

@@ -119,9 +119,16 @@ const Home = () => {
 
 						<div className="price"></div>
 
-						<button onClick={() => addToCart(1)} className="add-to-bag">
+						{/* <button onClick={() => addToCart(1)} className="add-to-bag">
 							ADD TO BAG
-						</button>
+						</button> */}
+
+						<div class="add-to-bag-container">
+							<div class="add-to-bag-button-container">
+								<span class="add-to-bag-mask">ADD TO BAG</span>
+								<button onClick={() => addToCart(1)} className="add-to-bag">ADD TO BAG</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -160,9 +167,16 @@ const Home = () => {
 
 						<div className="price"></div>
 
-						<button onClick={() => addToCart(2)} className="add-to-bag">
+						{/* <button onClick={() => addToCart(2)} className="add-to-bag">
 							ADD TO BAG
-						</button>
+						</button> */}
+
+						<div class="add-to-bag-container">
+							<div class="add-to-bag-button-container">
+								<span class="add-to-bag-mask">ADD TO BAG</span>
+								<button onClick={() => addToCart(2)} className="add-to-bag">ADD TO BAG</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -200,9 +214,15 @@ const Home = () => {
 
 						<div className="price"></div>
 
-						<button onClick={() => addToCart(3)} className="add-to-bag">
+						{/* <button onClick={() => addToCart(3)} className="add-to-bag">
 							ADD TO BAG
-						</button>
+						</button> */}
+						<div class="add-to-bag-container">
+							<div class="add-to-bag-button-container">
+								<span class="add-to-bag-mask">ADD TO BAG</span>
+								<button onClick={() => addToCart(3)} className="add-to-bag">ADD TO BAG</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -240,9 +260,15 @@ const Home = () => {
 
 						<div className="price"></div>
 
-						<button onClick={() => addToCart(4)} className="add-to-bag">
+						{/* <button onClick={() => addToCart(4)} className="add-to-bag">
 							ADD TO BAG
-						</button>
+						</button> */}
+						<div class="add-to-bag-container">
+							<div class="add-to-bag-button-container">
+								<span class="add-to-bag-mask">ADD TO BAG</span>
+								<button onClick={() => addToCart(4)} className="add-to-bag">ADD TO BAG</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
