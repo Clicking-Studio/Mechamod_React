@@ -550,16 +550,18 @@
         right: 345px; */
     }
 
-    .add-to-bag {
-        font-weight: 900;
-        font-size: 13px;
-        letter-spacing: 0.03em;
-        padding: 15px 55px;
-        /* Increase the padding to add more spacing */
-        margin-top: 10px;
-        top: 380px;
-        /* Adjust the vertical position as needed */
-        right: 290px;
+    .add-to-bag-button-container {
+        width: 240px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .add-to-bag-button-container button {
+        font-size: 14px;
+    }
+
+    .add-to-bag-mask {
+        font-size: 14px;
     }
 }
 
