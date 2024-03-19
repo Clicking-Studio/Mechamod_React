@@ -67,11 +67,14 @@
     font-size: 20px;
     list-style-type: none;
     display: flex;
-    /*position: absolute;*/
+    position: fixed; /* Change position to fixed */
+    bottom: 0; /* Align to the bottom of the viewport */
+    left: 14.5%; /* Align to the left edge of the viewport */
+    width: 100%; /* Occupy the full width of the viewport */
     align-items: baseline;
-    padding-left: 18%;
     padding-top: 3.5%;
 }
+
 
 .menu_list_bottom:not(:last-child) {
     margin-left: 24%;
@@ -167,6 +170,8 @@
 
     .menu_list_bottom {
         font-size: 12px;
+        left: 19.8%;
+        padding-top: 2%;
     }
 
     .discord_logo {
