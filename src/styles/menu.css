@@ -69,9 +69,10 @@
     display: flex;
     position: fixed; /* Change position to fixed */
     bottom: 0; /* Align to the bottom of the viewport */
-    left: 14.5%; /* Align to the left edge of the viewport */
+    left: 0; /* Align to the left edge of the viewport */
     width: 100%; /* Occupy the full width of the viewport */
     align-items: baseline;
+    padding-left: 16.3%;
     padding-top: 3.5%;
 }
 
@@ -170,7 +171,7 @@
 
     .menu_list_bottom {
         font-size: 12px;
-        left: 19.8%;
+        padding-left: 19.8%;
         padding-top: 2%;
     }
 
