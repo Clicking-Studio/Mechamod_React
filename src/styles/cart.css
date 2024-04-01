@@ -1,13 +1,15 @@
 .cart-content {
     position: fixed;
     top: 0;
-    right: -100%; /* Initial position off-screen */
+    right: -100%;
+    /* Initial position off-screen */
     width: 60%;
     height: 100%;
     overflow: none;
     background-color: #d3d3d3;
     z-index: 2;
-    transition: right 0.3s ease; /* Transition property for sliding effect */
+    transition: right 0.3s ease;
+    /* Transition property for sliding effect */
     box-shadow: -50px 0 200px rgba(0, 0, 0, 0.5);
 }
 
@@ -26,7 +28,8 @@
 
 .cart-header {
     color: #0b0b0c;
-    font-size: 50px; /* Adjust font size as needed */
+    font-size: 50px;
+    /* Adjust font size as needed */
     font-family: 'Hug Me Tight', sans-serif;
     padding-top: 20px;
     padding-left: 45px;
@@ -53,55 +56,64 @@
 .cart-container {
     display: flex;
     /* height: 100vh; Remove this line */
-    /*
+/*
     font-family: 'MetropolisRegular', sans-serif;
     padding-top: 70px;
 }*/
 
 .cart-container {
     display: flex;
-    flex-direction: column; /* Added */
+    flex-direction: column;
+    /* Added */
     align-items: center;
     font-family: 'MetropolisRegular', sans-serif;
     padding-top: 100px;
-    width: 100%; /* Added */
+    width: 100%;
+    /* Added */
 }
 
 .cart-image {
-    width: 130px; /* Adjust width as needed */
+    width: 130px;
+    /* Adjust width as needed */
     padding-left: 45px;
 }
 
 .cart-name {
-    flex: 1; /* Takes up remaining space */
+    flex: 1;
+    /* Takes up remaining space */
     text-align: left;
-    width: auto; /* Remove width constraint */
+    width: auto;
+    /* Remove width constraint */
 }
 
 .cart-price,
 .cart-trash {
     width: 20px;
-   /* margin-left: auto; /* Pushes the price and trash icon to the right */
+    /* margin-left: auto; /* Pushes the price and trash icon to the right */
 }
 
 .cart-trash {
     padding-top: 2px;
-    padding-left: 3px; 
+    padding-left: 3px;
     padding-right: 90px;
 }
 
 .cart-trash-button {
-    background: none; /* Remove background */
-    border: none; /* Remove border */
+    background: none;
+    /* Remove background */
+    border: none;
+    /* Remove border */
     padding: 0;
 }
 
 .cart-trash-button:focus {
-    outline: none; /* Remove focus outline */
+    outline: none;
+    /* Remove focus outline */
 }
 
 .cart-trash-button img {
-    display: block; /* Ensure the image takes up the full space of the button */
+    display: block;
+    /* Ensure the image takes up the full space of the button */
 }
 
 
@@ -120,7 +132,8 @@ table {
 }
 
 td {
-    padding: 0; /* Adjusted padding */
+    padding: 0;
+    /* Adjusted padding */
     text-align: left;
     white-space: nowrap;
     font-size: 20px;
@@ -136,7 +149,7 @@ td {
     position: absolute;
     right: 0;
     /* padding-top: 65px; */
-    /*
+/*
     padding-right: 90px;
     text-align: right;
 }
@@ -150,7 +163,8 @@ td {
     position: absolute;
     right: 0;
     padding-bottom: 100px;
-    padding-right: 60px; /* Adjust padding */ /*
+    padding-right: 60px; /* Adjust padding */
+/*
 } */
 
 
@@ -181,10 +195,12 @@ th {
     font-family: 'MetropolisRegular', sans-serif;
     font-weight: bolder;
     font-size: 18px;
-    
-    border: 2px solid #000; /* Adjust border styles as needed */
+
+    border: 2px solid #000;
+    /* Adjust border styles as needed */
     cursor: pointer;
-    margin-left: 10px; /* Add margin between buttons */
+    margin-left: 10px;
+    /* Add margin between buttons */
 
 }
 
@@ -205,3 +221,47 @@ th {
     color: #fff;
 }
 
+@media (max-width: 1198px) {
+    .cart-content {
+        width: 80%;
+    }
+
+    .cart-header {
+        font-size: 40px;
+        /* Adjust font size as needed */
+        padding-top: 0px;
+        padding-left: 20px;
+    }
+
+    .continue-shopping {
+        padding-right: 10px;
+        font-size: 15px;
+        font-family: 'MetropolisRegular', sans-serif;
+    }
+
+    .cart-image {
+        width: 100px;
+        /* Adjust width as needed */
+        padding-left: 10px;
+    }
+
+    .cart-buttons {
+        bottom: 5%;
+        left: 2%;
+    }
+
+    .checkout-button,
+    .continue-shopping-button {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .checkout-button {
+        padding: 20px 70px;
+    }
+
+    .continue-shopping-button {
+        background-color: transparent;
+        padding: 20px 10px;
+    }
+}
