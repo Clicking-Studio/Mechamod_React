@@ -196,3 +196,27 @@
         width: 100px;
     }
   }
+
+  @media (max-width: 1198px) {
+    .container_logo {
+        padding: 60px 0px;
+        left: 0;
+    }
+
+    .container_logo img {
+        width: 70px;
+    }
+    
+    .menu_list_bottom {
+        font-size: 15px;
+        display: block;
+        position: fixed; /* Change position to fixed */
+        bottom: 0; /* Align to the bottom of the viewport */
+        left: 0; /* Align to the left edge of the viewport */
+        width: 100%; /* Occupy the full width of the viewport */
+        align-items: baseline;
+        padding-left: 10%;
+        padding-top: 0;
+        
+    }
+  }
