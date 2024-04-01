@@ -229,8 +229,17 @@
         left: 0; /* Align to the left edge of the viewport */
         width: 100%; /* Occupy the full width of the viewport */
         align-items: baseline;
-        padding-left: 10%;
+        padding-left: 0%;
         padding-top: 0;
-        
+    }
+
+    .policy_options {
+        justify-content: center;
+        padding-bottom: 10px;
+        display: flex;
+    }
+
+    .follow_options {
+        display: block;
     }
   }
