@@ -168,10 +168,27 @@
 }
 
 @media (max-width: 1198px) {
+  .navbar_container {
+    min-width: 100%;
+    max-width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar_logo {
+    width: 70px;
+    height: 101px;
+    padding: 60px 20px;
+  }
   .navbar_text {
     display: none;
   }
   .navbar_line_spacer {
     display: none;
+  }
+  .navbar_side_text {
+    margin-top: 60px;
+    padding: 20px;
+    padding-right: 30px;
   }
 }
