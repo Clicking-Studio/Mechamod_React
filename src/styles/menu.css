@@ -165,6 +165,7 @@
 
   /* responsive css */
   @media (max-width: 1800px) {
+
     .menu_link {
         font-size: 52px;
     }
@@ -205,6 +206,19 @@
 
     .container_logo img {
         width: 70px;
+    }
+
+    .menu_list {
+        padding-top: 20%;
+        padding-right: 0px;
+    }
+    
+    .menu_item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    .menu_link {
+        font-size: 40px;
     }
     
     .menu_list_bottom {
