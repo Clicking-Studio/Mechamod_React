@@ -173,12 +173,12 @@ input[type="checkbox"]:checked~.container {
     .button {
         width: 8.5rem;
         height: 8.5rem;
-        margin: -167px 30px;
+        margin: -185px 30px;
     }
 
     .btn span {
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: 100px;
         font-size: 1em;
     }
 

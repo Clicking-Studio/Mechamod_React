@@ -4,16 +4,16 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 50%; /* Set width to half of the screen */
-    height: 100%; /* Take full height of the screen */
+    width: 50%;
+    /* Set width to half of the screen */
+    height: 100%;
+    /* Take full height of the screen */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.product-centering-div {
-    
-}
+.product-centering-div {}
 
 .show-content .product-left-text-container {
     display: block;
@@ -133,7 +133,8 @@
     font-size: 16px;
     letter-spacing: 0.03em;
     padding: 20px 85px;
-    /* Increase the padding to add more spacing *//*
+    /* Increase the padding to add more spacing */
+/*
     margin-top: 10px;
     background-color: transparent;
     color: #000;
@@ -141,7 +142,8 @@
     cursor: pointer;
     /* position: absolute;
     top: 510px;
-    right: 335px; *//*
+    right: 335px; */
+/*
 } */
 
 /* .dark .add-to-bag {
@@ -192,7 +194,7 @@
     /* make the snake's specific button cover the hole zone */
     background-color: transparent !important;
     flex: 1;
-    border: none ;
+    border: none;
     cursor: url('../assets/cart_30x30.png') 55 55, auto;
 }
 
@@ -309,8 +311,10 @@
     width: 100%;
     height: 100%;
     /* z-index: -9999999; */
-    display: flex; /* Add flexbox */
-    justify-content: center; /* Center horizontally */
+    display: flex;
+    /* Add flexbox */
+    justify-content: center;
+    /* Center horizontally */
 }
 
 .snake-background-item {
@@ -343,7 +347,7 @@
     left: 0;
     background-color: #e0e0e0;
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-} 
+}
 
 .dark .snake-background-overlay {
     background-color: #0B0B0C;
@@ -433,22 +437,24 @@
 
 .add-to-bag-button-container {
     position: relative;
-    width: 280px;
+    width: 260px;
     height: 60px;
     margin: 20px auto 0; /* Center horizontally and add margin at the top */
     overflow: hidden;
     transition: 0.5s;
     background-color: transparent;
     color: #000;
-    border: solid 2px;
+    border: 2px solid; /* Set border thickness */
+    border-radius: 30px; /* Set border radius for rounded corners */
 }
+
 
 .add-to-bag-button-container button {
     width: 100%;
     height: 100%;
     font-family: 'MetropolisRegular', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 18px;
     background: #000000;
     -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
     mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
@@ -468,39 +474,43 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center vertically and horizontally */
+    transform: translate(-50%, -50%);
+    /* Center vertically and horizontally */
     color: #000000;
     text-align: center;
-    width: 100%; /* Adjust as needed */
+    width: 100%;
+    /* Adjust as needed */
     font-family: 'MetropolisRegular', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 18px;
     overflow: hidden;
     letter-spacing: 0;
 }
 
-  
-  @keyframes anim1 {
+
+@keyframes anim1 {
     from {
-      -webkit-mask-position: 100% 0;
-      mask-position: 100% 0;
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
     }
+
     to {
-      -webkit-mask-position: 0 0;
-      mask-position: 0 0;
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
     }
-  }
-  
-  @keyframes anim2 {
+}
+
+@keyframes anim2 {
     from {
-      -webkit-mask-position: 0 0;
-      mask-position: 0 0;
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
     }
+
     to {
-      -webkit-mask-position: 100% 0;
-      mask-position: 100% 0;
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
     }
-  }
+}
 
 /* responsive css */
 @media (max-width: 1800px) {
@@ -553,15 +563,16 @@
     .add-to-bag-button-container {
         width: 240px;
         height: 50px;
-        font-size: 14px;
     }
 
     .add-to-bag-button-container button {
-        font-size: 14px;
+        font-weight: 700;
+        font-size: 18px;
     }
 
     .add-to-bag-mask {
-        font-size: 14px;
+        font-weight: 700;
+        font-size: 18px;
     }
 }
 
@@ -569,6 +580,26 @@
     /* .wrapper {
         display: none;
     } */
+
+    .product-left-text-container {
+        display: none;
+    }
+
+    .product-right-container {
+        position: fixed;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .add-to-bag-button-container {
+        width: 220px;
+        height: 50px;
+    }
 
     .botcontainer {
         display: none;
