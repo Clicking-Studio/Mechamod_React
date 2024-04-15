@@ -89,7 +89,7 @@
 
 .color-option {
     font-size: 20px;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding: 5px;
     margin: 10px;
     cursor: pointer;
@@ -439,13 +439,17 @@
     position: relative;
     width: 260px;
     height: 60px;
-    margin: 20px auto 0; /* Center horizontally and add margin at the top */
+    margin: 15px auto 0; /* Center horizontally and add margin at the top */
     overflow: hidden;
     transition: 0.5s;
     background-color: transparent;
     color: #000;
     border: 2px solid; /* Set border thickness */
-    border-radius: 30px; /* Set border radius for rounded corners */
+    border-radius: 40px; /* Set border radius for rounded corners */
+}
+
+.dark .add-to-bag-button-container {
+    color: #fff;
 }
 
 
@@ -454,7 +458,7 @@
     height: 100%;
     font-family: 'MetropolisRegular', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 22px;
     background: #000000;
     -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
     mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
@@ -464,6 +468,11 @@
     color: #ffffff;
     cursor: pointer;
     animation: anim2 0.7s steps(22) forwards;
+}
+
+.dark .add-to-bag-button-container button {
+    background-color:  #fff;
+    color: #000;
 }
 
 .add-to-bag-button-container button:hover {
@@ -482,9 +491,13 @@
     /* Adjust as needed */
     font-family: 'MetropolisRegular', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 22px;
     overflow: hidden;
     letter-spacing: 0;
+}
+
+.dark .add-to-bag-mask {
+    color: #fff;
 }
 
 
@@ -561,7 +574,7 @@
     }
 
     .add-to-bag-button-container {
-        width: 240px;
+        width: 210px;
         height: 50px;
     }
 
@@ -576,7 +589,7 @@
     }
 }
 
-@media (max-width: 1410px) {
+@media (max-width: 1280px) {
     /* .wrapper {
         display: none;
     } */
@@ -587,8 +600,8 @@
 
     .product-right-container {
         position: fixed;
-        top: 25%;
-        left: 25%;
+        top: 30%;
+        left: 27%;
         width: 50%;
         height: 100%;
         justify-content: center;
@@ -596,9 +609,19 @@
         text-align: center;
     }
 
+    .color-option {
+        padding-bottom: 0px;
+        margin: 3px;
+    }
+
+    .price {
+        margin: 0;
+    }
+
     .add-to-bag-button-container {
-        width: 220px;
-        height: 50px;
+        margin-top: 7px;
+        width: 200px;
+        height: 47px;
     }
 
     .botcontainer {

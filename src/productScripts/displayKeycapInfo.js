@@ -20,7 +20,7 @@ export async function fetchKeycaps() {
                 // Format the price
                 const priceNumber = parseFloat(keycap.price); // Convert price to number
                 const formattedPrice = new Intl.NumberFormat('en-IN').format(priceNumber); // Format price with commas
-                containerElement.querySelector('.price').innerHTML = `₹ ${formattedPrice}`; // Include currency symbol
+                containerElement.querySelector('.price').innerHTML = `${formattedPrice}INR`; // Include currency symbol
 
                 containerElement.querySelector('.product-left-text-header').innerHTML = keycap.description;
                 // Update other elements as needed
