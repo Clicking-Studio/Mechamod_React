@@ -535,7 +535,7 @@
 
     .product-left-text-title {
         /* padding-bottom: 5px; */
-        font-size: 25px;
+        font-size: 42px;
         /* padding-left: 220px; */
     }
 
@@ -543,7 +543,7 @@
         font-size: 15px;
         line-height: 17 pt;
         /* padding-left: 220px; */
-        max-width: 300px;
+        max-width: 210px;
     }
 
     .product-left-text-bottom {
