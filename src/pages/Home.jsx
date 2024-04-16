@@ -92,13 +92,11 @@ const Home = () => {
 						<div className="product-left-text-header"></div>
 						<ul className="product-left-text-bottom">
 							<li>Casted with Smooth-On</li>
-							<li>Compatible with Cherry MX</li>
-							<li className="li-continuation">and clones</li>
+							<li>Compatible with Cherry MX and clones</li>
+							{/* <li className="li-continuation">and clones</li> */}
 							<li>Hand Crafted</li>
-							<li>Limited to 50 units sold</li>
-							<li className="li-continuation">
-								worldwide, one of a kind ;)
-							</li>
+							<li>Price inclusive of taxes, without shipping</li>
+							{/* <li className="li-continuation">worldwide, one of a kind ;)</li> */}
 						</ul>
 					</div>
 				</div>

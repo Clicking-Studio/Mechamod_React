@@ -22,7 +22,7 @@
 .product-left-text-title {
     padding-bottom: 10px;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 47px;
     /* padding-left: 297px; */
     margin: 0;
 }
@@ -32,11 +32,11 @@
 }
 
 .product-left-text-header {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 20pt;
+    /* font-weight: 600; */
+    font-size: 16px;
+    line-height: 16pt;
     /* padding-left: 297px; */
-    max-width: 400px;
+    max-width: 250px;
 }
 
 .dark .product-left-text-header {
@@ -44,10 +44,11 @@
 }
 
 .product-left-text-bottom {
-    font-size: 21px;
-    line-height: 18pt;
+    font-size: 17px;
+    line-height: 16pt;
     letter-spacing: 0.008em;
-    padding-left: 20px;
+    padding-left: 0px;
+    list-style: none;
     /* padding-left: 313px; */
 }
 
