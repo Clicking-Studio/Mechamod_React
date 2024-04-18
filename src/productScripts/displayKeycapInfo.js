@@ -6,9 +6,6 @@ export async function fetchKeycaps() {
         console.log(`Connecting to ${baseURL}`);
         const keycaps = await response.json();
 
-        // Sort keycaps based on order_position
-        keycaps.sort((a, b) => a.order_position - b.order_position);
-
         keycaps.forEach((keycap, index) => {
             const containerId = `product-container${index}`;
             const containerElement = document.getElementById(containerId);
@@ -18,12 +15,40 @@ export async function fetchKeycaps() {
                 containerElement.querySelector('.product-left-text-title').innerHTML = keycap.name;
 
                 // Format the price
-                const priceNumber = parseFloat(keycap.price); // Convert price to number
-                const formattedPrice = new Intl.NumberFormat('en-IN').format(priceNumber); // Format price with commas
-                containerElement.querySelector('.price').innerHTML = `${formattedPrice}INR`; // Include currency symbol
+                const priceNumber = parseFloat(keycap.price);
+                const formattedPrice = new Intl.NumberFormat('en-IN').format(priceNumber);
+                containerElement.querySelector('.price').innerHTML = `${formattedPrice} INR`;
 
                 containerElement.querySelector('.product-left-text-header').innerHTML = keycap.description;
-                // Update other elements as needed
+
+                // Update bullet points
+                const bulletList = containerElement.querySelector('.product-left-text-bottom');
+                bulletList.innerHTML = ''; // Clear existing list items
+
+                // Add each bullet point from the keycap object
+                if (keycap.bullet1) {
+                    const bullet1 = document.createElement('li');
+                    bullet1.textContent = keycap.bullet1;
+                    bulletList.appendChild(bullet1);
+                }
+
+                if (keycap.bullet2) {
+                    const bullet2 = document.createElement('li');
+                    bullet2.textContent = keycap.bullet2;
+                    bulletList.appendChild(bullet2);
+                }
+
+                if (keycap.bullet3) {
+                    const bullet3 = document.createElement('li');
+                    bullet3.textContent = keycap.bullet3;
+                    bulletList.appendChild(bullet3);
+                }
+
+                if (keycap.bullet4) {
+                    const bullet4 = document.createElement('li');
+                    bullet4.textContent = keycap.bullet4;
+                    bulletList.appendChild(bullet4);
+                }
             }
         });
     } catch (error) {

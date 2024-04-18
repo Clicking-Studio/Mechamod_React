@@ -91,12 +91,10 @@ const Home = () => {
 						<div className="product-left-text-title"></div>
 						<div className="product-left-text-header"></div>
 						<ul className="product-left-text-bottom">
-							<li>Casted with Smooth-On</li>
+							{/* <li>Casted with Smooth-On</li>
 							<li>Compatible with Cherry MX and clones</li>
-							{/* <li className="li-continuation">and clones</li> */}
 							<li>Hand Crafted</li>
-							<li>Price inclusive of taxes, without shipping</li>
-							{/* <li className="li-continuation">worldwide, one of a kind ;)</li> */}
+							<li>Price inclusive of taxes, without shipping</li> */}
 						</ul>
 					</div>
 				</div>
@@ -139,12 +137,10 @@ const Home = () => {
 						<div className="product-left-text-title"></div>
 						<div className="product-left-text-header"></div>
 						<ul className="product-left-text-bottom">
-							<li>Description 1</li>
+							{/* <li>Description 1</li>
 							<li>Description 2</li>
-							<li className="li-continuation">test</li>
 							<li>Description 3</li>
-							<li>Description 4</li>
-							<li className="li-continuation">test</li>
+							<li>Description 4</li> */}
 						</ul>
 					</div>
 				</div>
@@ -186,12 +182,10 @@ const Home = () => {
 						<div className="product-left-text-title"></div>
 						<div className="product-left-text-header"></div>
 						<ul className="product-left-text-bottom">
-							<li>Description for it</li>
+							{/* <li>Description for it</li>
 							<li>Description for it too</li>
-							<li className="li-continuation">test</li>
 							<li>More of the description</li>
-							<li>Last description</li>
-							<li className="li-continuation">test</li>
+							<li>Last description</li> */}
 						</ul>
 					</div>
 				</div>
@@ -232,12 +226,10 @@ const Home = () => {
 						<div className="product-left-text-title"></div>
 						<div className="product-left-text-header"></div>
 						<ul className="product-left-text-bottom">
-							<li>Description for it</li>
+							{/* <li>Description for it</li>
 							<li>Description for it too</li>
-							<li className="li-continuation">test</li>
 							<li>More of the description</li>
-							<li>Last description</li>
-							<li className="li-continuation">another test</li>
+							<li>Last description</li> */}
 						</ul>
 					</div>
 				</div>
