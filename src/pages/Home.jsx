@@ -13,6 +13,9 @@ import { color } from "../script/color";
 import { useEffect } from "react";
 import { default as snakeBg1 } from "/images/snake_background1.png";
 import { default as mouseScroll } from "../assets/mouse-scroll-icon.png";
+import { default as shenronBg1 } from "/images/shenron_background2.png";
+import { default as hallowsBg1 } from "/images/hallows_background1.png"
+import { default as fourBg1 } from "/images/four_background1.png"
 import Navbar from "../components/Navbar";
 import Menu from "../components/Menu";
 import Cart from "./Cart";
@@ -39,6 +42,33 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
+
+				<div className="model2-background-container">
+					<div className="model2-background-item">
+						<div className="model2-background-wrapper">
+							<img src={shenronBg1} alt="" />
+							<div className="model2-background-overlay"></div>
+						</div>
+					</div>
+				</div>
+
+				<div className="model3-background-container">
+					<div className="model3-background-item">
+						<div className="model3-background-wrapper">
+							<img src={hallowsBg1} alt="" />
+							<div className="model3-background-overlay"></div>
+						</div>
+					</div>
+				</div>
+
+				<div className="model4-background-container">
+					<div className="model4-background-item">
+						<div className="model4-background-wrapper">
+							<img src={fourBg1} alt="" />
+							<div className="model4-background-overlay"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<canvas className="webgl" id="webgl"></canvas>
 			<div id="loading-message" className="loading-message">
@@ -47,27 +77,9 @@ const Home = () => {
 
 			<div className="wrapper">
 				<div id="hover-zone">
-					<div className="circle-text-holder1">
-						<div className="circle-text1 snake-circle">
-							{/* <!-- <p>The King Cobra . The King Cobra . The King Cobra . The King Cobra</p> --> */}
-						</div>
-						<div className="circle-text2 shenron-circle">
-							{/* <!-- <p>The Shenron . The Shenron . The Shenron . The Shenron . The Shenron</p> --> */}
-						</div>
-						<div className="circle-text3 model3-circle">
-							{/* <!-- <p>Model 3 . Model 3 . Model 3 . Model 3 . Model 3 . Model 3 . Model 3</p> --> */}
-						</div>
-						<div className="circle-text4 model4-circle">
-							{/* <!-- <p>Model 4 . Model 4 . Model 4 . Model 4 . Model 4 . Model 4 . Model 4</p> --> */}
-						</div>
-					</div>
-					{/* <!-- the snake's button --> */}
-					<button id="snake"></button>
-					{/* <!-- the shenon's button --> */}
-					<button id="shenon"></button>
-					{/* <!-- the model3's button --> */}
+					<button id="model1"></button>
+					<button id="model2"></button>
 					<button id="model3"></button>
-					{/* <!-- the model4's button --> */}
 					<button id="model4"></button>
 				</div>
 				<button

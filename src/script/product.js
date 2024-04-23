@@ -85,7 +85,7 @@ export const product = () => {
 	const hiddenZoneZ = -200;
 	const loader = new STLLoader();
 
-	const snake = loader.load(
+	const model1 = loader.load(
 		"https://firebasestorage.googleapis.com/v0/b/mechamod-97928.appspot.com/o/Snake_KeyCap_VI_STL_001.stl?alt=media",
 		(geometry) => {
 			const material = new THREE.MeshNormalMaterial();
@@ -94,7 +94,7 @@ export const product = () => {
 			// Hide the loading message when all keycaps are loaded
 			loadingMessage.style.display = "none";
 
-			const shenon = loader.load(
+			const model2 = loader.load(
 				"https://firebasestorage.googleapis.com/v0/b/mechamod-97928.appspot.com/o/shenron-keycap-v1.stl?alt=media",
 				(geometry) => {
 					const material = new THREE.MeshNormalMaterial();
@@ -199,7 +199,7 @@ export const product = () => {
 	var product3 = document.getElementById("product-container2"); // make the text a variable
 	var product4 = document.getElementById("product-container3"); // make the text a variable
 
-	var objbut = ["snake", "shenon", "model3", "model4"]; //make the keycaps an array of an object
+	var objbut = ["model1", "model2", "model3", "model4"]; //make the keycaps an array of an object
 	function visibility(indexVisible) {
 		//in this fuction from four buttons only one is visible, that button being the keycap specific button
 		for (let index = 0; index < objbut.length; index++) {
@@ -210,61 +210,101 @@ export const product = () => {
 		visBut.style.display = "block";
 	}
 
-	var snakeCircle = document.querySelector(".snake-circle");
-	var shenronCircle = document.querySelector(".shenron-circle");
-	var model3 = document.querySelector(".model3-circle");
-	var model4 = document.querySelector(".model4-circle");
 
 	var snakeFigure = document.querySelector(".snake-background-wrapper");
 	var snakeBack = document.querySelector(".snake-background-item img");
-	// Add the 'transition-active' class initially to start with the transition
 	snakeFigure.classList.add("transition-active");
+
+	const model2Container = document.querySelector(".model2-background-container");
+	model2Container.style.display = "none";
+	var model2Figure = document.querySelector(".model2-background-wrapper");
+	var model2Back = document.querySelector(".model2-background-item img");
+	model2Figure.classList.add("transition-active");
+
+	const model3Container = document.querySelector(".model3-background-container");
+	model3Container.style.display = "none";
+	var model3Figure = document.querySelector(".model3-background-wrapper");
+	var model3Back = document.querySelector(".model3-background-item img");
+	model3Figure.classList.add("transition-active");
+
+	const model4Container = document.querySelector(".model4-background-container");
+	model4Container.style.display = "none";
+	var model4Figure = document.querySelector(".model4-background-wrapper");
+	var model4Back = document.querySelector(".model4-background-item img");
+	model4Figure.classList.add("transition-active");
 
 	var isZoomed = false;
 	if (isZoomed) {
 		// Return to normal scale
 		snakeBack.style.transform = "scale(1.5)";
+		model2Back.style.transform = "scale(1.5)";
+		model3Back.style.transform = "scale(1.5)";
 	} else {
 		// Apply the transition
 		snakeBack.style.transform = "scale(1)";
+		model2Back.style.transform = "scale(1)";
+		model3Back.style.transform = "scale(1)";
 	}
 
 	function circleText() {
 		if (index === 0) {
-			snakeCircle.style.display = "block";
-			shenronCircle.style.display = "none";
-			model3.style.display = "none";
-			model4.style.display = "none";
-
 			snakeFigure.classList.add("transition-active");
 			snakeBack.style.transform = "scale(1)";
+
+			model2Container.style.display = "none"
+			model2Back.style.transform = "scale(1.5)";
+			model2Figure.classList.remove("transition-active");
+
+			model4Container.style.display = "none"
+			model4Back.style.transform = "scale(1.5)";
+			model4Figure.classList.remove("transition-active");
+
+			console.log(`index: ${index}`)
 		}
 		if (index === 1) {
-			snakeCircle.style.display = "none";
-			shenronCircle.style.display = "block";
-			model3.style.display = "none";
-			model4.style.display = "none";
-
 			snakeBack.style.transform = "scale(1.5)";
 			snakeFigure.classList.remove("transition-active");
+
+			model2Container.style.display = "flex"
+			model2Figure.classList.add("transition-active");
+			model2Back.style.transform = "scale(1)";
+
+			model3Container.style.display = "none"
+			model3Back.style.transform = "scale(1.5)";
+			model3Figure.classList.remove("transition-active");
+
+			console.log(`index: ${index}`)
 		}
 		if (index === 2) {
-			snakeCircle.style.display = "none";
-			shenronCircle.style.display = "none";
-			model3.style.display = "block";
-			model4.style.display = "none";
+			model2Back.style.transform = "scale(1.5)";
+			model2Figure.classList.remove("transition-active");
+
+			model3Container.style.display = "flex"
+			model3Figure.classList.add("transition-active");
+			model3Back.style.transform = "scale(1)";
+
+			model4Container.style.display = "none"
+			model4Back.style.transform = "scale(1.5)";
+			model4Figure.classList.remove("transition-active");
+
+			console.log(`index: ${index}`)
 		}
 		if (index === 3) {
-			snakeCircle.style.display = "none";
-			shenronCircle.style.display = "none";
-			model3.style.display = "none";
-			model4.style.display = "block";
-
 			snakeBack.style.transform = "scale(1.5)";
 			snakeFigure.classList.remove("transition-active");
+
+			model3Container.style.display = "none"
+			model3Back.style.transform = "scale(1.5)";
+			model3Figure.classList.remove("transition-active");
+
+			model4Container.style.display = "flex"
+			model4Figure.classList.add("transition-active");
+			model4Back.style.transform = "scale(1)";
+			
+			console.log(`index: ${index}`)
 		}
 	}
-	console.log("Starting index: " + curInd);
+	// console.log("Starting index: " + curInd);
 
 	let index = 0;
 	visibility(0);
@@ -279,8 +319,8 @@ export const product = () => {
 	let handleNextCalled = false;
 
 	function handlePrevious() {
-		console.log("User scrolled up.");
-		console.log("Current index: " + curInd);
+		// console.log("User scrolled up.");
+		// console.log("Current index: " + curInd);
 
 		// Scrollwheel up
 		if (transitionStarted) return;
@@ -326,8 +366,8 @@ export const product = () => {
 	function handleNext() {
 		visibletext(); // Function to make the text disappear when scrolling
 
-		console.log("User scrolled down or clicked 'Next'.");
-		console.log("Current index: " + curInd);
+		// console.log("User scrolled down or clicked 'Next'.");
+		// console.log("Current index: " + curInd);
 
 		// Scrollwheel down logic
 		if (transitionStarted) return;
@@ -344,7 +384,7 @@ export const product = () => {
 		visibility(index);
 
 		circleText();
-		
+
 		handleNextCalled = true;
 
 		// Call hideButton if both handlePrevious and handleNext have been called
@@ -369,7 +409,7 @@ export const product = () => {
 	var product3Visible = false;
 	var product4Visible = false;
 
-	const button0 = document.getElementById("snake"); //make the text appear on click and at the second click to dissappear
+	const button0 = document.getElementById("model1"); //make the text appear on click and at the second click to dissappear
 	button0.addEventListener("click", () => {
 		product1Visible = !product1Visible;
 		if (product1Visible) {
@@ -387,7 +427,7 @@ export const product = () => {
 		}
 	});
 
-	const button1 = document.getElementById("shenon"); //make the text appear on click and at the second click to dissappear
+	const button1 = document.getElementById("model2"); //make the text appear on click and at the second click to dissappear
 	button1.addEventListener("click", () => {
 		product2Visible = !product2Visible;
 		if (product2Visible) {

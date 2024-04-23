@@ -128,36 +128,6 @@
     color: #e0e0e0;
 }
 
-/* .add-to-bag {
-    font-family: 'MetropolisRegular', sans-serif;
-    font-weight: 900;
-    font-size: 16px;
-    letter-spacing: 0.03em;
-    padding: 20px 85px;
-    /* Increase the padding to add more spacing */
-/*
-    margin-top: 10px;
-    background-color: transparent;
-    color: #000;
-    border: solid 1.5px;
-    cursor: pointer;
-    /* position: absolute;
-    top: 510px;
-    right: 335px; */
-/*
-} */
-
-/* .dark .add-to-bag {
-    color: #e0e0e0;
-}
-
-.add-to-bag:hover {
-    background-color: #6e6e6e;
-}
-
-.add-to-bag:active {
-    background-color: #353232;
-} */
 
 #product-container0 {
     display: none;
@@ -191,7 +161,7 @@
     /* Add fade transition properties */
 }
 
-#snake {
+#model1 {
     /* make the snake's specific button cover the hole zone */
     background-color: transparent !important;
     flex: 1;
@@ -199,7 +169,7 @@
     cursor: url('../assets/cart_30x30.png') 55 55, auto;
 }
 
-#shenon {
+#model2 {
     /* make the shenon's specific button cover the hole zone */
     background-color: transparent !important;
     flex: 1;
@@ -259,52 +229,6 @@
     }
 }
 
-/* .circle-text-holder {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    left: 50%;
-    top: 0%;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    z-index: -9999;
-    background: #ccc;
-  } */
-
-@keyframes rotateText {
-    0% {
-        transform: rotate(360deg);
-    }
-}
-
-.circle-text-holder1 {
-    position: relative;
-    left: 50%;
-}
-
-.circle-text1 {
-    position: absolute;
-    width: 0%;
-    height: 100%;
-    animation:
-        fadeInAnimation 3s ease-in,
-        rotateText 10s linear infinite;
-    font-family: MetropolisRegular;
-    font-weight: 400;
-}
-
-.circle-text1 span {
-    position: absolute;
-    left: 100%;
-    font-size: 1.2em;
-    transform-origin: 0px 200px;
-}
-
-.dark .circle-text1 {
-    color: #e0e0e0;
-}
-
 
 
 .snake-background-container {
@@ -316,6 +240,7 @@
     /* Add flexbox */
     justify-content: center;
     /* Center horizontally */
+    position: absolute;
 }
 
 .snake-background-item {
@@ -358,82 +283,169 @@
     top: -100%;
 }
 
-.circle-text2 {
-    position: absolute;
-    width: 0%;
+/*-model2 background-*/
+
+.model2-background-container {
+    margin-top: 10%;
+    width: 100%;
     height: 100%;
-    animation:
-        fadeInAnimation 3s ease-in,
-        rotateText 10s linear infinite;
-    font-family: MetropolisRegular;
-    font-weight: 400;
-}
-
-.dark .circle-text2 {
-    color: #e0e0e0;
-}
-
-.circle-text2 span {
+    /* z-index: -9999999; */
+    /* display: flex; */
+    /* Add flexbox */
+    justify-content: center;
+    /* Center horizontally */
     position: absolute;
-    left: 100%;
-    font-size: 1.2em;
-    transform-origin: 0px 200px;
+   
 }
 
-.shenron-circle {
+.model2-background-item {
+    position: relative;
+    width: 60vh;
+    height: 100%;
+    overflow: hidden;
+    }
+
+
+.model2-background-item img {
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* object-fit: cover; */
+    transform: scale(1.5);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark .model2-background-item img {
+    filter: invert();
+}
+
+.model2-background-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #e0e0e0;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark .model2-background-overlay {
+    background-color: #0B0B0C;
+}
+
+.transition-active .model2-background-overlay {
+    top: -100%;
+}
+
+/*-model3 background-*/
+
+.model3-background-container {
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+    /* z-index: -9999999; */
+    /* display: flex; */
+    /* Add flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    position: absolute;
     display: none;
 }
 
-.circle-text3 {
-    position: absolute;
-    width: 0%;
+.model3-background-item {
+    position: relative;
+    width: 60vh;
     height: 100%;
-    animation:
-        fadeInAnimation 3s ease-in,
-        rotateText 10s linear infinite;
-    font-family: MetropolisRegular;
-    font-weight: 400;
-}
+    overflow: hidden;
+    }
 
-.dark .circle-text3 {
-    color: #e0e0e0;
-}
 
-.circle-text3 span {
+.model3-background-item img {
     position: absolute;
-    left: 100%;
-    font-size: 1.2em;
-    transform-origin: 0px 200px;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* object-fit: cover; */
+    transform: scale(1.5);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.model3-circle {
+.dark .model3-background-item img {
+    filter: invert();
+}
+
+.model3-background-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #e0e0e0;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark .model3-background-overlay {
+    background-color: #0B0B0C;
+}
+
+.transition-active .model3-background-overlay {
+    top: -100%;
+}
+
+/*-model4 background-*/
+
+.model4-background-container {
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+    /* z-index: -9999999; */
+    /* display: flex; */
+    /* Add flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    position: absolute;
     display: none;
 }
 
-.circle-text4 {
-    position: absolute;
-    width: 0%;
+.model4-background-item {
+    position: relative;
+    width: 60vh;
     height: 100%;
-    animation:
-        fadeInAnimation 3s ease-in,
-        rotateText 10s linear infinite;
-    font-family: MetropolisRegular;
-    font-weight: 400;
-}
+    overflow: hidden;
+    }
 
-.dark .circle-text4 {
-    color: #e0e0e0;
-}
 
-.circle-text4 span {
+.model4-background-item img {
     position: absolute;
-    left: 100%;
-    font-size: 1.2em;
-    transform-origin: 0px 200px;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* object-fit: cover; */
+    transform: scale(1.5);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.model4-circle {
-    display: none;
+.dark .model4-background-item img {
+    filter: invert();
+}
+
+.model4-background-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #e0e0e0;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.dark .model4-background-overlay {
+    background-color: #0B0B0C;
+}
+
+.transition-active .model4-background-overlay {
+    top: -100%;
 }
 
 .add-to-bag-button-container {

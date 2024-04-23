@@ -6,7 +6,29 @@ export async function fetchKeycaps() {
         console.log(`Connecting to ${baseURL}`);
         const keycaps = await response.json();
 
-        keycaps.forEach((keycap, index) => {
+        // Function to fetch STL path for a specific keycap
+        const fetchSTLPath = async (keycap) => {
+            try {
+                const stlResponse = await fetch(`${baseURL}/keycaps/${keycap.id}/stl_path`);
+                const stlData = await stlResponse.json();
+                return stlData.stl_path || ''; // Return STL path or empty string if not found
+            } catch (error) {
+                console.error(`Error fetching STL path for keycap ${keycap.id}:`, error);
+                return ''; // Return empty string on error
+            }
+        };
+
+        // Fetch STL path for each keycap asynchronously
+        const keycapsWithSTL = await Promise.all(keycaps.map(async (keycap) => {
+            const stlPath = await fetchSTLPath(keycap);
+            return {
+                ...keycap,
+                stl_path: stlPath
+            };
+        }));
+
+        // Update HTML content with keycap data
+        keycapsWithSTL.forEach((keycap, index) => {
             const containerId = `product-container${index}`;
             const containerElement = document.getElementById(containerId);
 
@@ -51,10 +73,14 @@ export async function fetchKeycaps() {
                 }
             }
         });
+
+        return keycapsWithSTL; // Return keycaps data with STL path included
     } catch (error) {
         console.error('Error fetching keycaps:', error);
+        return []; // Return empty array on error
     }
 }
+
 
 // Fetch keycaps when the page loads
 // document.addEventListener('DOMContentLoaded', fetchKeycaps);
