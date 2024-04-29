@@ -1,3 +1,5 @@
+import { fetchBackgrounds, snakeBg1, shenronBg1, hallowsBg1, fourBg1 } from "../productScripts/backgroundImage";
+
 const baseURL = 'https://mechamod-backend.vercel.app'; // Update with your deployed URL
 
 export async function fetchKeycaps() {
@@ -5,6 +7,9 @@ export async function fetchKeycaps() {
         const response = await fetch(`${baseURL}/keycaps`);
         console.log(`Connecting to ${baseURL}`);
         const keycaps = await response.json();
+
+        // Call fetchBackgrounds to fetch background images
+        await fetchBackgrounds();
 
         // Function to fetch STL path for a specific keycap
         const fetchSTLPath = async (keycap) => {
@@ -19,16 +24,16 @@ export async function fetchKeycaps() {
         };
 
         // Fetch STL path for each keycap asynchronously
-        const keycapsWithSTL = await Promise.all(keycaps.map(async (keycap) => {
-            const stlPath = await fetchSTLPath(keycap);
-            return {
-                ...keycap,
-                stl_path: stlPath
-            };
-        }));
+        // const keycapsWithSTL = await Promise.all(keycaps.map(async (keycap) => {
+        //     const stlPath = await fetchSTLPath(keycap);
+        //     return {
+        //         ...keycap,
+        //         stl_path: stlPath
+        //     };
+        // }));
 
         // Update HTML content with keycap data
-        keycapsWithSTL.forEach((keycap, index) => {
+        keycaps.forEach((keycap, index) => {
             const containerId = `product-container${index}`;
             const containerElement = document.getElementById(containerId);
 
@@ -71,6 +76,9 @@ export async function fetchKeycaps() {
                     bullet4.textContent = keycap.bullet4;
                     bulletList.appendChild(bullet4);
                 }
+
+                // Set background images
+                containerElement.style.backgroundImage = `url(${getImageUrlByIndex(index)})`;
             }
         });
 
@@ -81,6 +89,18 @@ export async function fetchKeycaps() {
     }
 }
 
-
-// Fetch keycaps when the page loads
-// document.addEventListener('DOMContentLoaded', fetchKeycaps);
+// Function to get image URL by index
+function getImageUrlByIndex(index) {
+    switch (index) {
+        case 0:
+            return snakeBg1;
+        case 1:
+            return shenronBg1;
+        case 2:
+            return hallowsBg1;
+        case 3:
+            return fourBg1;
+        default:
+            return '';
+    }
+}
