@@ -20,7 +20,7 @@ const Navbar = () => {
                 </Link>
             </li>
             <li className="navbar_text">
-                <Link to="/catalogue">Shop</Link>
+                <Link to="/catalogue">Test</Link>
             </li>
             <li className="navbar_line_spacer">
                 <a href="#">—</a>
