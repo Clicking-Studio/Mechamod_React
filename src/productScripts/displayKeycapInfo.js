@@ -1,7 +1,7 @@
 import { fetchBackgrounds, snakeBg1, shenronBg1, hallowsBg1, fourBg1 } from "../productScripts/backgroundImage";
-// const baseURL = 'https://mechamod-backend.vercel.app'; // Update with your deployed URL
+const baseURL = 'https://mechamod-backend.vercel.app'; // Update with your deployed URL
 
-const baseURL = 'http://3.142.172.85:3000'; // Update with your deployed URL
+// const baseURL = 'http://3.142.172.85:3000'; // Update with your deployed URL
 
 export async function fetchKeycaps() {
     try {

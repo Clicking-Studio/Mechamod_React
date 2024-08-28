@@ -4,7 +4,7 @@ let hallowsBg1;
 let fourBg1;
 
 const fetchBackgrounds = () => {
-    return fetch('http://3.142.172.85:3000/keycaps')
+    return fetch('https://mechamod-backend.vercel.app/keycaps')
         .then(response => response.json())
         .then(data => {
             data.sort((a, b) => a.order_position - b.order_position);
