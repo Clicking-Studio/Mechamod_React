@@ -23,7 +23,7 @@ import Cart from "./Cart";
 const Home = () => {
 	useEffect(() => {
 		darkLightModes(); //dark-light modes functionallity
-		color(); //color functionality
+		//color(); //color functionality
 		product(); //product functionallity
 		fetchKeycaps();  //fetch key caps functionallity
 	});
@@ -113,7 +113,7 @@ const Home = () => {
 
 				<div className="product-right-container">
 					<div className="product-centering-div">
-						<div className="color-options">
+						{/* <div className="color-options">
 							<div className="color-option" id="color-black">
 								BLACK
 							</div>
@@ -123,7 +123,7 @@ const Home = () => {
 							<div className="color-option" id="color-gold">
 								GOLD
 							</div>
-						</div>
+						</div> */}
 
 						<div className="price"></div>
 
@@ -159,7 +159,7 @@ const Home = () => {
 
 				<div className="product-right-container">
 					<div className="product-centering-div">
-						<div className="color-options">
+						{/* <div className="color-options">
 							<div className="color-option" id="color-black">
 								BLACK
 							</div>
@@ -169,7 +169,7 @@ const Home = () => {
 							<div className="color-option" id="color-gold">
 								GOLD
 							</div>
-						</div>
+						</div> */}
 
 						<div className="price"></div>
 
@@ -204,7 +204,7 @@ const Home = () => {
 
 				<div className="product-right-container">
 					<div className="product-centering-div">
-						<div className="color-options">
+						{/* <div className="color-options">
 							<div className="color-option" id="color-black">
 								BLACK
 							</div>
@@ -214,7 +214,7 @@ const Home = () => {
 							<div className="color-option" id="color-gold">
 								GOLD
 							</div>
-						</div>
+						</div> */}
 
 						<div className="price"></div>
 
@@ -248,7 +248,7 @@ const Home = () => {
 
 				<div className="product-right-container">
 					<div className="product-centering-div">
-						<div className="color-options">
+						{/* <div className="color-options">
 							<div className="color-option" id="color-black">
 								BLACK
 							</div>
@@ -258,7 +258,7 @@ const Home = () => {
 							<div className="color-option" id="color-gold">
 								GOLD
 							</div>
-						</div>
+						</div> */}
 
 						<div className="price"></div>
 
