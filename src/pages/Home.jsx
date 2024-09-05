@@ -276,12 +276,7 @@ const Home = () => {
 			</div>
 
 			<div className="index-container">
-				{/* <!-- <button className="index-button" id="snake">Buy Now</button>
-        <button className="index-button" id="shenon">Buy Now</button>
-        <button className="index-button" id="model3">Buy Now</button>
-        <button className="index-button" id="model4">Buy Now</button> --> */}
-
-				<button className="index-button" id="previousBTN">
+				<button className="index-button" id="previousBTN"> {/* This past has to be in, even if you dont see it */}
 					<div className="index-arrow">&#8593;</div>
 					<div>Previous</div>
 				</button>
@@ -289,12 +284,8 @@ const Home = () => {
 					<div className="index-arrow">
 						<img src={mouseScroll} alt="" />
 					</div>
-					<div>Scroll for next product</div>
+					{/* <div>Scroll for next product</div> */}
 				</button>
-			</div>
-
-			<div className="botcontainer">
-				{/* <!-- <img src="mouse-scroll-icon.png" alt="Scroll Icon" className="scroll-wheel" id="scroll-icon"> --> */}
 			</div>
 
 			<Menu />

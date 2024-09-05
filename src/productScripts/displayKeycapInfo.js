@@ -91,17 +91,17 @@ export async function fetchKeycaps() {
 }
 
 // Function to get image URL by index
-function getImageUrlByIndex(index) {
-    switch (index) {
-        case 0:
-            return snakeBg1;
-        case 1:
-            return shenronBg1;
-        case 2:
-            return hallowsBg1;
-        case 3:
-            return fourBg1;
-        default:
-            return '';
-    }
-}
+// function getImageUrlByIndex(index) {
+//     switch (index) {
+//         case 0:
+//             return snakeBg1;
+//         case 1:
+//             return shenronBg1;
+//         case 2:
+//             return hallowsBg1;
+//         case 3:
+//             return fourBg1;
+//         default:
+//             return '';
+//     }
+// }
